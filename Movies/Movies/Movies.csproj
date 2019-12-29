@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageTargetFallback>$(PackageTargetFallback);portable-win+net45+wp8+win81+wpa8;portable-net45+win8</PackageTargetFallback>
+    <AssemblyName>Movies</AssemblyName>
+    <RootNamespace>Movies</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\rating_empty.png" />
+    <EmbeddedResource Include="Images\rating_full.png" />
+    <EmbeddedResource Include="Images\rating_half.png" />
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="7.0.0.362" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.7.944" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\ComedyView.xaml.cs">
+      <DependentUpon>ComedyView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
